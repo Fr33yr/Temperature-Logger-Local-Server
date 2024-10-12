@@ -69,6 +69,51 @@ async function startServer() {
       res.status(200).json(rows);
     });
   });
+
+  app.get("/week", (req, res) => {
+    db.all(
+      "SELECT * FROM templogs WHERE created_at >= DATETIME('now', '-7 days') ORDER BY created_at DESC",
+      [],
+      (err, rows) => {
+        if(err) {
+          console.error(err.message);
+          res.status(500).json({ message: "Error retrieving data from the database" });
+          return;
+        }
+        res.status(200).json(rows);
+      }
+    );
+  });
+
+  app.get("/day", (req, res) => {
+    db.all(
+      "SELECT * FROM templogs WHERE created_at >= DATETIME('now', '-1 day') ORDER BY created_at DESC",
+      [],
+      (err, rows) => {
+        if(err) {
+          console.error(err.message);
+          res.status(500).json({ message: "Error retrieving data from the database" });
+          return;
+        }
+        res.status(200).json(rows);
+      }
+    )
+  })
+
+  app.get("/hour", (req, res) => {
+    db.all(
+      "SELECT * FROM templogs WHERE created_at >= DATETIME('now', '-1 hour') ORDER BY created_at DESC",
+      [],
+      (err, rows) => {
+        if(err) {
+          console.error(err.message);
+          res.status(500).json({ message: "Error retrieving data from the database" });
+          return;
+        }
+        res.status(200).json(rows);
+      }
+    )
+  })
   
 
   app.post("/", (req, res) => {
