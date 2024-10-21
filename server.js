@@ -31,7 +31,7 @@ async function startServer() {
 
   db.serialize(()=> {
     // Create table with a date column
-    db.run("CREATE TABLE IF NOT EXISTS templogs (id INTEGER PRIMARY KEY AUTOINCREMENT, name, value REAL, created_at TEXT)");
+    db.run("CREATE TABLE IF NOT EXISTS templogs (id INTEGER PRIMARY KEY AUTOINCREMENT, name, temperature REAL, created_at TEXT)");
   })
 
   // Server initialization
@@ -132,7 +132,7 @@ async function startServer() {
 
     // Insert data into the templogs table
     db.run(
-      "INSERT INTO templogs (name, value, created_at) VALUES (?, ?, ?)",
+      "INSERT INTO templogs (name, temperature, created_at) VALUES (?, ?, ?)",
       [name, value, createdAt],
       function (err) {
         if (err) {
