@@ -9,7 +9,7 @@ An overview of the server's functionality, setup instructions, and details about
 1. [Introduction](#introduction)
 2. [Setup Instructions](#setup-instructions)
 3. [API Endpoints](#api-endpoints)
-   - [GET /templogs](#get-endpoint1)
+   - [GET /templogs](#get-templogs)
    - [POST /endpoint2](#post-endpoint2)
    - [PUT /endpoint3](#put-endpoint3)
    - [DELETE /endpoint4](#delete-endpoint4)
