@@ -60,7 +60,7 @@ async function startServer() {
   })
 
   app.get("/templogs", (req, res) => {
-    db.all("SELECT * FROM templogs ORDER BY created_at DESC", [], (err, rows) => {
+    db.all("SELECT * FROM templogs ORDER BY created_at DESC LIMIT ?", [15], (err, rows) => {
       if (err) {
         console.error(err.message);
         res.status(500).json({ message: "Error retrieving data from the database" });
@@ -70,7 +70,7 @@ async function startServer() {
     });
   });
 
-  app.get("/week", (req, res) => {
+  app.get("/templogs/week", (req, res) => {
     db.all(
       "SELECT * FROM templogs WHERE created_at >= DATETIME('now', '-7 days') ORDER BY created_at DESC",
       [],
@@ -85,7 +85,7 @@ async function startServer() {
     );
   });
 
-  app.get("/day", (req, res) => {
+  app.get("/templogs/day", (req, res) => {
     db.all(
       "SELECT * FROM templogs WHERE created_at >= DATETIME('now', '-1 day') ORDER BY created_at DESC",
       [],
@@ -100,7 +100,7 @@ async function startServer() {
     )
   })
 
-  app.get("/hour", (req, res) => {
+  app.get("/templogs/hour", (req, res) => {
     db.all(
       "SELECT * FROM templogs WHERE created_at >= DATETIME('now', '-1 hour') ORDER BY created_at DESC",
       [],
