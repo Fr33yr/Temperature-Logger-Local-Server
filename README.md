@@ -9,7 +9,7 @@ An overview of the server's functionality, setup instructions, and details about
 1. [Introduction](#introduction)
 2. [Setup Instructions](#setup-instructions)
 3. [API Endpoints](#api-endpoints)
-   - [GET /endpoint1](#get-endpoint1)
+   - [GET /templogs](#get-endpoint1)
    - [POST /endpoint2](#post-endpoint2)
    - [PUT /endpoint3](#put-endpoint3)
    - [DELETE /endpoint4](#delete-endpoint4)
@@ -62,5 +62,5 @@ Below is a list of the available API endpoints for this server, including descri
     ```
 - **Example**:
   ```bash
-  curl http://localhost:3000/api/users?page=1&limit=5
+  curl http://192.168.100.30:3000/templogs
 
