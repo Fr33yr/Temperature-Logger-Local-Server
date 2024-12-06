@@ -10,9 +10,9 @@ An overview of the server's functionality, setup instructions, and details about
 2. [Setup Instructions](#setup-instructions)
 3. [API Endpoints](#api-endpoints)
    - [GET /templogs](#get-templogs)
-   - [GET /templogs/week](#get-templogs-week)
-   - [GET /templogs/day](#get-templogs-day)
-   - [GET /templogs/hour](#get-templogs-hour)
+   - [GET /templogs/week](#get-templogsweek)
+   - [GET /templogs/day](#get-templogsday)
+   - [GET /templogs/hour](#get-templogshour)
 4. [Error Handling](#error-handling)
 5. [License](#license)
 
