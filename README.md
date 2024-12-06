@@ -64,7 +64,8 @@ Below is a list of the available API endpoints for this server, including descri
   ```bash
   curl http://192.168.100.30:3000/templogs
 
-  ### GET /templogs/week
+
+### GET /templogs/week
 
 - **Description**: Retrieves a list of all temperature logs from the past seven days in desc order by date.
 - **Response**:
@@ -87,10 +88,10 @@ Below is a list of the available API endpoints for this server, including descri
     ```
 - **Example**:
   ```bash
-  curl http://192.168.100.30:3000/templogs
+  curl http://192.168.100.30:3000/templogs/week
 
 
-   ### GET /templogs/day
+### GET /templogs/week
 
 - **Description**: Retrieves a list of all temperature logs from the past day in desc order by date.
 - **Response**:
@@ -113,10 +114,10 @@ Below is a list of the available API endpoints for this server, including descri
     ```
 - **Example**:
   ```bash
-  curl http://192.168.100.30:3000/templogs
+  curl http://192.168.100.30:3000/templogs/day
 
 
-   ### GET /templogs/hour
+### GET /templogs/hour
 
 - **Description**: Retrieves a list of all temperature logs from the past hour in desc order by date.
 - **Response**:
@@ -139,5 +140,5 @@ Below is a list of the available API endpoints for this server, including descri
     ```
 - **Example**:
   ```bash
-  curl http://192.168.100.30:3000/templogs
+  curl http://192.168.100.30:3000/templogs/hour
 
