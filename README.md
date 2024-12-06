@@ -39,29 +39,26 @@ Below is a list of the available API endpoints for this server, including descri
 
 ---
 
-### GET /api/users
+### GET /templogs
 
-- **Description**: Retrieves a list of all users.
-- **Query Parameters**:
-  - `page` (optional): The page number for paginated results.
-  - `limit` (optional): The number of users per page (default: 10).
+- **Description**: Retrieves a list of all temperature logs.
 - **Response**:
   - **200 OK**:
     ```json
-    {
-      "users": [
-        {
-          "id": 1,
-          "name": "John Doe",
-          "email": "john@example.com"
-        },
-        {
-          "id": 2,
-          "name": "Jane Smith",
-          "email": "jane@example.com"
-        }
-      ]
-    }
+    [
+      {
+        "id": 2346,
+        "name": "sensor_1",
+        "temperature": -27.81,
+        "created_at": "2024-10-23T11:47:45.128Z"
+      },
+      {
+        "id": 2345,
+        "name": "sensor_0",
+        "temperature": 7.69,
+        "created_at": "2024-10-23T11:47:44.910Z"
+      }
+    ]
     ```
 - **Example**:
   ```bash
